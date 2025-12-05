@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5 bg-dark rounded border border-secondary shadow p-3 mb-5 rounded">
+    <div class="container p-3">
+        <input id="name" class="p-2" type="text"id="input" placeholder="Nome" autocomplete="off" autofocus>
+        <button onclick="btn()" id="btn" type="button" class="btn btn-secondary btn-sm">Adicionar</button>
+    </div>
+    
+    <table class="table border-secondary">
+        <thead class="table-light">
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th colspan="3">Número aleatório</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Conteúdo -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="footer" style="display: none;" class="text-center p-2 transition-fade" colspan="10">Tabela Atualizada</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
