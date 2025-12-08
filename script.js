@@ -1,6 +1,15 @@
 let id = 0
 let numberRow = 1
 
+function showAlert(message, time = 3000) { 
+    const alert = document.getElementById('footer')
+    alert.innerHTML = message
+    alert.style.display = ''
+
+    setTimeout(() => {
+        alert.style.display = 'none'
+    }, time)
+}
 
 function btn() {
     const alert = document.getElementById('footer')
@@ -9,11 +18,7 @@ function btn() {
     const randomNumber = Math.floor(Math.random()*9999999999)
 
     if(input.value === '') {
-        setTimeout(() => {
-            document.getElementById('footer').style.display = 'none'
-        }, 2000)
-        alert.innerHTML = 'Preencha o campo nome'
-        alert.style.display = ''
+        showAlert('Preencha o campo nome', 2000)
         return
     }
     
@@ -28,11 +33,7 @@ function btn() {
     const tbody = document.querySelector('tbody')
     tbody.appendChild(tr)
     input.value = ''
-    alert.style.display = ''
-    setTimeout(() => {
-            alert.style.display = 'none'
-        }, 3000)
-
+    showAlert('', 3000)
     const btn = tr.querySelector('button')
     btn.addEventListener('click', function() {
         tr.remove()
@@ -42,7 +43,7 @@ function btn() {
         }
     })
 
-    if (numberRow >= 6) { // sim, daria pra arrumar com uma function, mas deu preguiça agora kkkkk 
+    if (numberRow >= 6) { // sim, daria pra arrumar com uma function
         document.getElementById('mainTable').style.display = ''
     }
 }
