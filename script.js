@@ -33,7 +33,7 @@ function btn() {
     const tbody = document.querySelector('tbody')
     tbody.appendChild(tr)
     input.value = ''
-    showAlert('', 3000)
+    showAlert('Tabela Atualizada', 3000)
     const btn = tr.querySelector('button')
     btn.addEventListener('click', function() {
         tr.remove()
@@ -42,8 +42,7 @@ function btn() {
             document.getElementById('mainTable').style.display = 'none'
         }
     })
-
-    if (numberRow >= 6) { // sim, daria pra arrumar com uma function
+    if (numberRow >= 6) {
         document.getElementById('mainTable').style.display = ''
     }
 }
