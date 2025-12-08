@@ -3,6 +3,7 @@ let numberRow = 1
 
 
 function btn() {
+    const alert = document.getElementById('footer')
     const input = document.getElementById('name')    
     id++ 
     const randomNumber = Math.floor(Math.random()*9999999999)
@@ -11,8 +12,8 @@ function btn() {
         setTimeout(() => {
             document.getElementById('footer').style.display = 'none'
         }, 2000)
-        document.getElementById('footer').innerHTML = 'Preencha o campo nome'
-        document.getElementById('footer').style.display = ''
+        alert.innerHTML = 'Preencha o campo nome'
+        alert.style.display = ''
         return
     }
     
@@ -27,9 +28,9 @@ function btn() {
     const tbody = document.querySelector('tbody')
     tbody.appendChild(tr)
     input.value = ''
-    document.getElementById('footer').style.display = ''
+    alert.style.display = ''
     setTimeout(() => {
-            document.getElementById('footer').style.display = 'none'
+            alert.style.display = 'none'
         }, 3000)
 
     const btn = tr.querySelector('button')
@@ -41,7 +42,7 @@ function btn() {
         }
     })
 
-    if (numberRow >= 6) {
+    if (numberRow >= 6) { // sim, daria pra arrumar com uma function, mas deu preguiça agora kkkkk 
         document.getElementById('mainTable').style.display = ''
     }
 }
